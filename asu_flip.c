@@ -55,6 +55,8 @@ static void asu_free_app(AsuApp* app) {
     gui_remove_view_port(app->gui, app->view_port);
 
     // free queues
+    furi_message_queue_free(app->ble_rx_queue);
+    furi_message_queue_free(app->ble_tx_queue);
     furi_message_queue_free(app->input_queue);
 
     // free thread
