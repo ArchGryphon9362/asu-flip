@@ -6,3 +6,4 @@
 
 void asu_draw_cb(Canvas* canvas, void* ctx);
 void asu_input_cb(InputEvent* event, void* ctx);
+int32_t asu_ble_cb(void* ctx);

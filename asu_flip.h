@@ -18,9 +18,10 @@ typedef struct {
     Gui* gui;
     ViewPort* view_port;
     FuriMessageQueue* input_queue;
-    /* FuriThread* ble_thread; */
-    /* FuriMessageQueue* ble_tx_queue; */
-    /* FuriMessageQueue* ble_rx_queue; */
+
+    FuriThread* ble_thread;
+    FuriMessageQueue* ble_tx_queue;
+    FuriMessageQueue* ble_rx_queue;
 
     // states
     AsuState state;
